@@ -27,10 +27,14 @@ const SignUpPage = () => {
   };
   return (
     <>
-      <div class="hero-banner">
-        <h1>BUAT AKUN BARU</h1>
-
-        <p></p>
+      <div className="w-full h-96 bg-[url('/DashboardBackground.jpg')]">
+        <div className="flex h-full items-center justify-center flex-col gap-4 bg-black/50">
+          <div className="text-white">
+            <h1 className="text-5xl font-semibold drop-shadow-sm">
+              Buat Akun Baru
+            </h1>
+          </div>
+        </div>
       </div>
       <form
         action=""

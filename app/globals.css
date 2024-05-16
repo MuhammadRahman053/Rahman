@@ -27,18 +27,24 @@ li > a{
 }
 html{
   --bg:white;
+  --background-start:#cffafe;
+  --background-end:#06b6d4;
   --color:black;
   --grey:#ddd;
 
 }
 html[data-theme=dark]{
   --bg:hsl(180, 5%, 4%);
+  --background-start:#111;
+  --background-end:#333;
   --color:white;
   --grey:#444;
 
 }
 body{
-  background-color: var(--bg); color: var(--color)
+  /* background-color: var(--bg);  */
+  color: var(--color);
+  background:linear-gradient(60deg, var(--background-start)0%,var(--background-end)100%)
 }
 li {
   color:white;
@@ -268,9 +274,10 @@ display:flex;
 flex-direction: column;
 justify-content: center;
 align-items:center;
-background:url("/Background.jpg") no-repeat center ;
+background:url("/DashboardBackground.jpg") no-repeat center center/cover ;
+object-fit: cover;
 width: 100%;
-min-height:30vh;
+min-height:26rem;
 color:white;
 }
 
