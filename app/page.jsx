@@ -38,7 +38,7 @@ export default function Home() {
           title="Simulasi"
           image="/Icon Simulasi 1 .png"
         />
-        <Card variant="yellow" href="/soal" title="Soal" image="/paper.svg" />
+        <Card variant="yellow" href="/soal" title="Soal" image="/Paper.svg" />
         <Card
           variant="blue"
           href="/pembuat"
