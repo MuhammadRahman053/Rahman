@@ -32,7 +32,7 @@ export const Kotak = ({ title }) => {
     height = 4;
     backgroundColor = "bg-red-600";
   } else if (title == "-X ") {
-    width = 2;
+    width = 4;
     height = 2;
     backgroundColor = "bg-red-500";
   } else if (title == "-1") {

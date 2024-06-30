@@ -72,8 +72,8 @@ export function getEquation(arr) {
     false
   );
 
-  const findTopMinus = minArr.sort((a, b) => a.top - b.top);
-  const findLeftMinus = minArr.sort((a, b) => a.left - b.left);
+  const findTopMinus = [...minArr].sort((a, b) => a.top - b.top); // ascending sort using top component
+  const findLeftMinus = [...minArr].sort((a, b) => a.left - b.left); // ascending sort using left component
   const firstEqMinus = boxtitleToEquation(
     getEquationTitleFromArr(findTopMinus, true),
     true

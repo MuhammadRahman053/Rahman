@@ -52,6 +52,7 @@ const Playground = ({ isSnapToGrid }) => {
     d: { title: "-X", left: 112 + -64 - 16, top: 128 },
     e: { title: "-1", left: 112 + 128 + 64 + 64 + 48, top: 128 },
     f: { title: "X ", left: 112 + 128 + 64 * 4, top: 128 },
+    g: { title: "-X ", left: 112 + 128 + 128 + 16 + 64 * 4, top: 128 },
   };
   let audiohappy =
     typeof Audio != "undefined" ? new Audio("/audio/yay.mp3") : undefined;
