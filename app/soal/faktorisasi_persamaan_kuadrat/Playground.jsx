@@ -141,7 +141,7 @@ const Playground = ({ isSnapToGrid }) => {
   const tryAgain = () => {
     setShowEmoticon(false);
     if (statusJawaban.type == "bentuk") {
-      setKotak({});
+      // setKotak({});
     } else if (statusJawaban.type == "ukuran") {
       setPanjang("");
       setLebar("");
@@ -168,6 +168,14 @@ const Playground = ({ isSnapToGrid }) => {
       setNomerSoal((value) => value + 1);
       setSoal(LIST_SOAL[nomerSoal]);
       reset();
+    }
+  };
+  const soalSebelumnya = () => {
+    if (nomerSoal == 1) {
+      alert("ini soal pertama");
+    } else {
+      setNomerSoal((value) => value - 1);
+      setSoal(LIST_SOAL[nomerSoal - 2]);
     }
   };
   const reset = () => {
@@ -302,7 +310,23 @@ const Playground = ({ isSnapToGrid }) => {
           <div className="mr-24 tracking-widest flex flex-col items-center gap-6">
             <p>No</p>
             <h1 className="text-4xl">
+              <span>
+                <button
+                  className="text-black font-bold text-4xl mr-1"
+                  onClick={() => soalSebelumnya()}
+                >
+                  {"<"}
+                </button>
+              </span>
               {nomerSoal} / {LIST_SOAL.length}
+              <span>
+                <button
+                  className="text-black font-bold text-4xl ml-1"
+                  onClick={() => soalSelanjutnya()}
+                >
+                  {">"}
+                </button>
+              </span>
             </h1>
           </div>
           <div className="flex flex-col gap-3 items-center">
