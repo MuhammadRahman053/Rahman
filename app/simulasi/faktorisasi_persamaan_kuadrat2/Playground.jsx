@@ -9,6 +9,11 @@ import { snapToGrid } from "@/app/components/snapToGrid";
 import Latex from "react-latex-next";
 import useScreenSize from "@/app/utils/useScreenSize";
 import { NodeNextRequest } from "next/dist/server/base-http/node";
+import {
+  SimulasiSebelumnya,
+  SimulasiSelanjutnya,
+} from "@/app/components/NavigasiSoal";
+import TutorialSimulasi from "@/app/components/TutorialSimulasi";
 
 const styles = {
   width: "100%",
@@ -255,6 +260,7 @@ const Playground = ({ isSnapToGrid }) => {
 
   return (
     <div className="flex flex-col h-screen">
+      <TutorialSimulasi />
       <div className="flex flex-col flex-1 justify-between bg-white">
         <div
           className="absolute flex flex-col gap-3 items-center text-black bg-white  duration-1000 -translate-y-1/2 transition-all"
@@ -272,6 +278,8 @@ const Playground = ({ isSnapToGrid }) => {
           </h1>
         </div>
         <div ref={dropRef} style={styles}>
+          <SimulasiSebelumnya Babsekarang={5} />
+          <SimulasiSelanjutnya Babsekarang={5} />
           <div
             className="absolute text-black transition-all duration-1000"
             style={{
@@ -461,7 +469,7 @@ const Playground = ({ isSnapToGrid }) => {
           ))}
         </div>
         <button
-          className="absolute bg-red-400 rounded-xl py-6 px-12 left-16 top-8 text-white hover:bg-red-500 cursor pointer disabled:bg-gray-400 disabled:cursor-not-allowed disabled:ring-0"
+          className="absolute bg-red-400 rounded-xl py-12 px-16 left-16 top-8 text-white hover:bg-red-500 cursor pointer disabled:bg-gray-400 disabled:cursor-not-allowed disabled:ring-0"
           onClick={() => {
             kondisiPerStep();
             setStep((prev) => {
@@ -474,7 +482,7 @@ const Playground = ({ isSnapToGrid }) => {
           Prev
         </button>
         <button
-          className="absolute bg-red-400 rounded-xl py-6 px-12 right-16 top-8 text-white hover:bg-red-500 cursor pointer disabled:bg-gray-400 disabled:cursor-not-allowed disabled:ring-0"
+          className="absolute bg-green-400 rounded-xl py-12 px-16 right-16 top-8 text-white hover:bg-green-500 cursor pointer disabled:bg-gray-400 disabled:cursor-not-allowed disabled:ring-0"
           onClick={() => {
             kondisiPerStep();
             setStep((prev) => {

@@ -11,6 +11,7 @@ import useScreenSize from "@/app/utils/useScreenSize";
 import { NodeNextRequest } from "next/dist/server/base-http/node";
 import { getEquation, getEquationPenjabaran } from "../components/getEquation";
 import DeleteButton from "../components/DeleteButton";
+import Tutorial from "../components/Tutorial";
 
 const styles = {
   width: "50%",
@@ -300,6 +301,7 @@ const Playground = ({ isSnapToGrid }) => {
   return (
     <div className="flex flex-col h-screen bg-gradient-to-t from-emerald-50  to-emerald-200 ">
       <div className="flex flex-col flex-1 justify-between ">
+        <Tutorial />
         <div
           className="absolute flex flex-row gap-3 items-center text-black  duration-1000 -translate-y-1/2 transition-all"
           style={{

@@ -22,7 +22,7 @@ export const Kotak = ({ title }) => {
   } else if (title == "1") {
     width = 2;
     height = 2;
-    backgroundColor = "bg-yellow-500";
+    backgroundColor = "bg-yellow-600";
   } else if (title == "X ") {
     width = 4;
     height = 2;
@@ -34,11 +34,11 @@ export const Kotak = ({ title }) => {
   } else if (title == "-X ") {
     width = 4;
     height = 2;
-    backgroundColor = "bg-red-500";
+    backgroundColor = "bg-red-600";
   } else if (title == "-1") {
     width = 2;
     height = 2;
-    backgroundColor = "bg-red-600";
+    backgroundColor = "bg-purple-600";
   }
 
   const widthFromSize = `${width * 2}rem`;

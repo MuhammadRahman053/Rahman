@@ -27,24 +27,13 @@ export default function Home() {
       </div>
       <div className="relative h-[50svh] flex justify-evenly items-center flex-wrap p-6 gap-6">
         <Card
-          variant="red"
-          href="/tujuan"
+          href="/tujuan_pembelajaran"
           title="Tujuan Pembelajaran"
-          image="/Icon Tujuan Pembelajaran.png"
+          image="/Tujuan Pembelajaran Logo.png"
         />
-        <Card
-          variant="green"
-          href="/simulasi"
-          title="Simulasi"
-          image="/Icon Simulasi 1 .png"
-        />
-        <Card variant="yellow" href="/soal" title="Soal" image="/Paper.svg" />
-        <Card
-          variant="blue"
-          href="/pembuat"
-          title="Pembuat"
-          image="/Icon Pembuat.png"
-        />
+        <Card href="/simulasi" title="Simulasi" image="/Logo Simulasi.png" />
+        <Card href="/soal" title="Soal" image="/LatihanSoal.png" />
+        <Card href="/pembuat" title="Pembuat" image="/Author.png" />
       </div>
     </>
   );
@@ -66,10 +55,15 @@ const Card = ({ title, image, href, variant }) => {
       href={href}
       className={`${color} p-8 px-12 w-64 h-64 rounded-full flex flex-col items-center justify-center gap-8 hover:brightness-105 hover:scale-105 transition-all`}
     >
-      <p className="font-medium text-2xl text-black max-w-[10ch] text-center">
+      <p className="font-bold text-2xl text-black max-w-[10ch] text-center">
         {title}
       </p>
-      <Image src={image} width={64} height={64} className="object-contain" />
+      <Image
+        src={image}
+        width={1024}
+        height={1024}
+        className="object-contain"
+      />
     </Link>
   );
 };
